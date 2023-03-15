@@ -1,0 +1,57 @@
+%\documentclass{article}
+\documentclass[journal]{IEEEtran}
+\usepackage[utf8]{inputenc}
+%\usepackage[UTF8,punct,linespread=1.56]{ctex}
+\usepackage{cite}
+
+\title{Full and Abrv Conversion}
+\author{cjh}
+\date{March 2023}
+
+\begin{document}
+\bstctlcite{MyBSTcontrol}
+% 需要手动把这个entry添加到你的pBOOK_abrv.bib文件里！
+%@IEEEtranBSTCTL{MyBSTcontrol, ctlname_url_prefix = {[Online]----Available:}, ctluse_url         = {no}, }
+
+\maketitle
+
+\bibliographystyle{IEEEtran}
+
+\section{Full Transaction name in references}
+
+Cite some papers here\cite{
+1995-Bodson.Chiasson.ea-Nonlinear,
+2010-Foo.Rahman-Sensorless,
+1991-Lorenz.VanPatten-High,
+2003-Kim.Harke.ea-Sensorless,
+2012-Yang.Lorenz-Surface,
+2010-Kim.Degner.ea-Discrete,
+2015-Li.Qu.ea-Synthesis,
+1955-Rauch.Johnson-Design,
+1989-Slemon-Modelling,
+2003-Chen.Tomita.ea-extended,
+2018-Ou.Liu.ea-Experimental,
+2022-Chen.Mei.ea-Online}
+
+\bibliography{IEEEfull,pBOOK_abrv}
+
+\newpage 
+\section{Abbreviated Transaction name in references}
+
+Cite some papers here\cite{
+1995-Bodson.Chiasson.ea-Nonlinear,
+2010-Foo.Rahman-Sensorless,
+1991-Lorenz.VanPatten-High,
+2003-Kim.Harke.ea-Sensorless,
+2012-Yang.Lorenz-Surface,
+2010-Kim.Degner.ea-Discrete,
+2015-Li.Qu.ea-Synthesis,
+1955-Rauch.Johnson-Design,
+1989-Slemon-Modelling,
+2003-Chen.Tomita.ea-extended,
+2018-Ou.Liu.ea-Experimental,
+2022-Chen.Mei.ea-Online}
+
+\bibliography{IEEEabrv,pBOOK_abrv}
+
+\end{document}
